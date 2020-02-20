@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!---->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Depressão não é frescura!</title>
+        
+    </head>
+
+    <body>
+      
+        <header>
+            <h1 style="font-size: 45px;">Ajude 🌻</h1>
+            <h2>Dê um pouco de seu tempo e esforço</h2>
+            <p>Milhares de pessoas tiram suas vidas</p>
+            <p>Poucas procuram ajuda</p>
+            <p>O que fazer /</p>
+            <button>Quero ajudar</button>
+        </header>
+        <div class="container hide">
+        <section class="form">
+            <h2>Entre na lista de Ajudadores</h2>
+            <form action="/" method="POST">
+                <input type="text" name="nome" placeholder="Nome Completo">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="ocupacao" placeholder="Ocupação">
+                <button type="submit">Quero Judar</button>
+            </form>
+        </section>
+        <span class="imglink">Imagem de <a href="https://pixabay.com/pt/users/mploscar-1445608/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1127174">Mircea Ploscar</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1127174">Pixabay</a></span>
+
+    </div>
+        <main>
+            <h2> Últimoss <span>ajudadores</span></h2>
+            <section class="donors">
+                {% for donor in donors %}
+                    <div class="donor">
+                        <div class="boold">{{donor.ocupacao}}</div>
+                        <p>{{donor.nome}}</p>
+                    </div>
+                {% endfor %}
+            </section>
+        </main>
+        <footer>Com 💖 Jessica Araujo</footer>
+        <script src="scripts.js"></script>
+    </body>
+</html>
